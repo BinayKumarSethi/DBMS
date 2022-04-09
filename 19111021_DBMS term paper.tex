@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{graphicx}
+\begin{document}
+\title{DBMS IN ONLINE GAMING}
+
+
+\author{Binay Kumar Sethi \\
+	19111021 \\
+ 	6th Semester \\ 
+	Biomedical Engineering\\
+	}
+
+\maketitle 
+ \hrulefill
+ 
+ 
+ \section{Introduction}
+ 
+Massive Multiplayer Online Games (MMOGs) have a high number of players that can interact with one another at any time. One possibility is that each shard is a separate world that is placed on a server. Another option is to make the shard support a set number of concurrent players on a full universe or playing field. Other games may have a single universe that is partitioned and distributed over multiple servers. Players who log into one server will be in that server's universe; to access another section of the game universe, they must switch servers.
+MMOGs are data-driven applications, and the databases that power them must meet high performance, availability and scalability.
+
+In this report we will be discussing the importance of databases for the gaming industry, what its requirements are in terms of database technology as well as a discussion on why MySQL is or should be the database of choice for anyone wanting to develop online social games that are reliable and stable in all their aspects. Furthermore, when considering the games specifically, the gaming products on the system will be categorized according to various aspects. These aspects include genre, release, popularity, etc. These categorizations will hence make the games easier to search as filters can be applied. This will also help with sorting the games and how they will be displayed. The game itself will not be implemented but instead, when the user decides to play a game, that he or she owns, random scores shall be generated that will be assigned to the user. Also, the user will need to possess the game in his/her list of games to be able to play it.\\
+\textbf{Table Of Content :- }
+ \begin{itemize}
+\item GAME CATEGORIES
+\item User Functions
+\item Use of Database
+\item Requirements and Limitations
+\item Conclusion
+
+\end{itemize}
+
+ \section{GAME CATEGORIES}
+ It is evident that there are several categories in the present gaming community, and many of them are quite abstract. We intend to have only the following categories under which a game can be identified:\\
+
+See also  Social Discussion Website Free Source Code in PHP
+Action games, Adventure games, Virtual reality games, Sports games, Casual games, Indie Games, RPG, Strategy games, Simulation games, Massively Multiplayer Online games.\\
+ \section{USER FUNCTIONS}
+ The user will be able to do a various set of tasks using the system. These tasks are specified below:
+
+Search through the list of games using filters and/or search bar
+
+Purchasing games which add it to the list of games he has
+
+Playing games through which he fulfills achievement list of game and gains progress
+
+Adding other users as friends in his friend/contact list
+
+Chat with friends using a messaging window
+
+Play multiplayer games with friends
+
+Be able to view friends that have the same games as he has
+
+Send gifts to his friends
+
+The scope for the game, however, does not allow the user to add games to the list of games available for purchase. Hence the system will have a predefined set of games. Keeping this in consideration, there is only one type of user who uses the system. A gamer who can only buy games and no developer who will be able to add games onto the database of games.\\
+
+\includegraphics[scale=0.5]{../players-users-area.png} \\
+ \section{USE OF DATABASE}
+ A database shall be used to store information regarding games and users. This database shall allow the user to search for information regarding both games and users with the help of queries. For example, the user can select to see a list of games that fall under a certain category via the webpage interface. This will result in a query being used to project only the games that all under the category, sorted alphabetically. The user can also want to sort the list of games by other attributes that the ‘Game’ entity shall possess such as popularity, derived from the number of people who have the game, or difficulty level of the game.
+
+Similarly, the users shall also be stored in the database and shall be identified by their unique user id. This shall act as the primary key. However, the user shall not need the unique ID to search up the name of his/her friend, but instead can write the friend’s name itself, and all users who have matching names will be projected using the queries. The user information shall also consist of attributes such as friends and gifts. Hence through database queries, when an individual looks like a game, only those people who own the game will be projected who also are friends with the user. Furthermore, the database will also store personal information about the user. This will include user-name, password, and credit card information which can only be seen by the user.
+
+
+Moreover, the various relationships that will be present, such as when the user writes reviews and when he/she creates group chats will be supported by the entities of the relationships. The messaging platform will need a database to store the participants in a group and the messages sent. Hence it can be seen that the messages will be temporarily stored in a database. Therefore, several database manipulations will be made such as adding group tuples when a new group is formed by a user. The attributes of the group entity can also store information such as who is the group administrator and the participants of the group.
+{\includegraphics[scale=0.15]{../gaming---catalog-and-inventory.png} } 
+
+
+The database is going to be an integral part of the system and most of the idea is based on the database. It will be loaded onto the webpage which shall be used as the interface by which the user accesses the database. However, the user will not be able to see the database structure and instead will only see relevant information displayed on the webpage. Hence the queries that will be used to retrieve the information and alter the tables will be automatically generated upon the selection of the user on the webpage. This can be done by basic string concatenation.
+
+ \section{Requirements and Limitations}
+ \subsection{Requirements}
+ Database – To store the user information, friends, groups, past chats, names of the games, genres, and developers.
+
+See also  Scientific Papers Data Management System Free source code PHP
+A server to store the database shall be established on one of the laptops of a group member.
+
+The database shall be implemented using SQL and the user will interact with the interface by using queries automatically generated upon interaction with UI
+
+Messaging platform – To facilitate communication between individual users. Also includes group chats.
+
+Implemented using JMS (Java Messaging Service) or using PHP, or a combination of both.
+
+Webpage – User interface to enable users to interact with our program.
+
+Will be implemented using HTML, JavaScript, and CSS. This will form the User Interface for the user.
+
+Through selections on the webpage, a query will be automatically generated.
+
+Server requirements – To communicate between server and our program (webpage).
+
+ \subsection{Limitations}
+ Financial transaction – Our software won’t allow users to practically purchase game which requires authorization and dealings from financial franchises like VISA and MasterCard although the user can see “Buy” option and will be allowed to enter credit card credentials.
+
+Adding a game – As of yet, our program does not allow developers to add new games. It will include some predefined games which users can play.
+
+Scalability – Our program is not large enough to be used for commercial purposes due to storage issues on servers. Our program will not be efficient with a large number of users as well.
+
+In-game chat option – Since we are not developing games it will be hard for us to implement in-game chat.
+
+Information security – The database will be storing sensitive information such as credit card information. Its security cannot be granted from unauthorized access.
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ \end{document}
